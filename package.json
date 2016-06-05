@@ -1,11 +1,24 @@
 {
   "name": "customer_records",
   "version": "1.0.0",
-  "description": "A customer records Angular application",
+  "description": "",
   "main": "server.js",
+  "dependencies": {
+    "express": "^4.13.4"
+  },
+  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zbw322092/Customer-Records-Angular-App.git"
   },
   "author": "Bowen Zhong",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zbw322092/Customer-Records-Angular-App/issues"
+  },
+  "homepage": "https://github.com/zbw322092/Customer-Records-Angular-App#readme"
 }
