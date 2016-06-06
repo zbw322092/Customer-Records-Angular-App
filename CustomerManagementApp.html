@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="customersApp">
 
 <head>
   <title>Customer Records Angular Application</title>
@@ -17,12 +17,15 @@
         </a>
       </div>
       <p class="navbar-text">Customer Records</p>
-      <ul class="nav nav-pills">
-        <li><a href="">Customers</a></li>
-        <li><a href="">Orders</a></li>
+      <!-- change the button's style according to the class -->
+      <ul class="nav nav-pills" ng-controller="NavBarController">
+        <li ng-class="{'active': getClass('/customers')}"><a href="#/customers">Customers</a></li>
+        <li ng-class="{'active': getClass('/orders')}"><a href="#/orders">Orders</a></li>
       </ul>
     </div>
   </div>
+
+  <div ></div>
 
 
 	<!-- jQuery -->
@@ -32,6 +35,9 @@
   <!-- Angular Scripts -->
   <script type="text/javascript" src="scripts/angular.js"></script>
   <script type="text/javascript" src="scripts/angular-route.js"></script>
+
+	<script type="text/javascript" src="app/app.js"></script>
+  <script type="text/javascript" src="app/controllers/controllers.js"></script>
 </body>
 
 </html>
