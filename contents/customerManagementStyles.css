@@ -1,0 +1,109 @@
+.cardContainer {
+	width: 90%;
+	margin-top: 20px;
+	margin-left: -10px;
+}
+
+.cardContainer .col-xs-3 {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.card {
+	height: 75px;
+	width: 225px;
+	background-color: #efefef;
+	border: 1px solid black;
+	margin-bottom: 20px;
+	margin-left: 8px;
+}
+
+.card-name {
+	font-size: 16px;
+	line-height: 28px;
+	height: 28px;
+	color: white;
+	background-color: #006dcc;
+}
+
+.card-name span {
+	margin-left: 5px;
+}
+
+.close {
+	font-size: 16px;
+	color: white;
+	opacity: 1;
+	margin-right: 5px;
+	line-height: 28px;
+}
+
+.card-city {
+	margin-left: 5px;
+}
+
+.view-orders {
+	margin-left: 5px;
+}
+
+
+
+
+
+
+
+
+.container {
+	width: 99%;
+	margin-left: 10px;
+	margin-top: -15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
