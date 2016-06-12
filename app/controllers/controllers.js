@@ -7,3 +7,5 @@ app.controller("NavBarController", function($scope, $location) {
 		}
 	}
 });
+
+
