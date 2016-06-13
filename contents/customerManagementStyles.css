@@ -1,3 +1,4 @@
+/* customers styles */
 .cardContainer {
 	width: 90%;
 	margin-top: 20px;
@@ -50,6 +51,69 @@
 
 
 
+/* orders styles */
+.orders-form {
+	width: 90%;
+	margin-left: 0px;	
+}
+
+table {
+	margin-top: 10px;
+}
+
+caption {
+	padding-bottom: 0px;
+	font-weight: bold;
+	font-size: 19px;
+}
+
+
+tr, td {
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+.orders-form-header > * {
+	background-color: #006dcc;
+	font-weight: bold;
+	color: white;
+	padding-left: 5px;
+}
+
+.orders-form-body > * {
+	padding-left: 5px;
+}
+
+.orders-form-last > * {
+	background-color: #d9edf7;
+	padding-left: 5px;	
+}
+
+
+
+/* customer orders styles */
+.customer-info {
+	margin-left: 20px;
+	margin-top: 20px;
+}
+
+.customer-name {
+	font-size: 17px;
+}
+
+.customer-address {
+	margin-top: 8px;
+}
+
+.customer-orders-form {
+	margin-left: 20px;
+	margin-top: 50px;
+}
+
+
+
+
+
 
 
 
@@ -58,6 +122,8 @@
 	margin-left: 10px;
 	margin-top: -15px;
 }
+
+
 
 
 

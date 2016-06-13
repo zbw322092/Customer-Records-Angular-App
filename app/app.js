@@ -10,5 +10,9 @@ app.config(function($routeProvider) {
     	controller: "",
     	templateUrl: "../app/partials/orders.html"
     })
+    .when('/customerorders/:id', {
+      controller: "",
+      templateUrl: "../app/partials/customerOrders.html"
+    })
     .otherwise({ redirectTo: '/customers' });
 });
