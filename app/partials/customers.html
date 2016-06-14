@@ -21,7 +21,11 @@
       </div>
       <div class="col-sm-3">
         <br>
-        <button class="btn btn-primary" ng-click="addCustomer(firstName, lastName, city)">Add Customer</button>
+        <!-- empty string cannot be judged as false directly, we should use ! to transfer it 
+        as boolean value -->
+        <button class="btn btn-primary" ng-click="addCustomer(firstName, lastName, city)"
+        ng-disabled="!(firstName&&lastName&&city)">
+          Add Customer</button>
       </div>
     </div>
 
@@ -40,71 +44,7 @@
         <a class="view-orders" href="">View <span> {{ customer.orders.length }} </span> Orders</a>
       </div>
 
-     <!--  <div class="col-xs-3 card">
-        <div class="card-name">
-          <span>Bowen Zhong</span>
-          <button class="close">&times;</button>
-        </div>
-        <div class="card-city">
-          Shanghai
-        </div>
-        <a class="view-orders" href="">View 2 Orders</a>
-      </div>
 
-      <div class="col-xs-3 card">
-        <div class="card-name">
-          <span>Bowen Zhong</span>
-          <button class="close">&times;</button>
-        </div>
-        <div class="card-city">
-          Shanghai
-        </div>
-        <a class="view-orders" href="">View 2 Orders</a>
-      </div>
-
-      <div class="col-xs-3 card">
-        <div class="card-name">
-          <span>Bowen Zhong</span>
-          <button class="close">&times;</button>
-        </div>
-        <div class="card-city">
-          Shanghai
-        </div>
-        <a class="view-orders" href="">View 2 Orders</a>
-      </div>
-
-      <div class="col-xs-3 card">
-        <div class="card-name">
-          <span>Bowen Zhong</span>
-          <button class="close">&times;</button>
-        </div>
-        <div class="card-city">
-          Shanghai
-        </div>
-        <a class="view-orders" href="">View 2 Orders</a>
-      </div>
-
-      <div class="col-xs-3 card">
-        <div class="card-name">
-          <span>Bowen Zhong</span>
-          <button class="close">&times;</button>
-        </div>
-        <div class="card-city">
-          Shanghai
-        </div>
-        <a class="view-orders" href="">View 2 Orders</a>
-      </div>
-      
-      <div class="col-xs-3 card">
-        <div class="card-name">
-          <span>Bowen Zhong</span>
-          <button class="close">&times;</button>
-        </div>
-        <div class="card-city">
-          Shanghai
-        </div>
-        <a class="view-orders" href="">View 2 Orders</a>
-      </div> -->
     </div>
   </div>
 </div>
