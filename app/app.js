@@ -3,7 +3,7 @@ var app = angular.module("customersApp", ['ngRoute']);
 app.config(function($routeProvider) {
   $routeProvider
     .when('/customers', {
-      controller: "",
+      controller: "CustomersController",
       templateUrl: "../app/partials/customers.html"
     })
     .when('/orders', {

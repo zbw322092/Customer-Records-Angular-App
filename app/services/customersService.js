@@ -2,47 +2,52 @@
 //each doing the same thing just structuring the functions/data differently.
 app.service('customersService', function() {
 
-	this.getCustomers = function() {
-		return customers;
-	};
+  this.getCustomers = function() {
+    return customers;
+  };
 
-	this.insertCustomer = function(firstName, lastName, city) {
-		customers.push({
-			id: customers.length + 1,
-			firstName: firstName,
-			lastName: lastName,
-			city: city
-		});
-	};
+  this.insertCustomer = function(firstName, lastName, city) {
+    customers.push({
+      id: customers.length + 1,
+      firstName: firstName,
+      lastName: lastName,
+      city: city
+    });
+  };
 
-	this.deleteCustomer = function(id) {
-		for (var i = 1; i < customers.length; i++ ) {
-			if (customers[i].id === id)
-				customers.splice(i-1, 1);
-				break;
-		}
-	};
+  this.deleteCustomer = function(id) {
+    for (var i = 0; i < customers.length; i++) {
+      if (customers[i].id === id) {
+        customers.splice(i, 1);
+        break;
+      }
+      // The following codes make the programme just deletes the first customer record.
+      // if (customers[i].id === id)
+      //   customers.splice(i, 1);
+      //   break;
+    }
+  };
 
-	this.getCustomer = function(id) {
-		for (var i=1; i < customers.length; i++) {
-			if (customers[i].id === id)
-				return customers[i]
-		}
-		return null;
-	};
+  this.getCustomer = function(id) {
+    for (var i = 1; i < customers.length; i++) {
+      if (customers[i].id === id)
+        return customers[i]
+    }
+    return null;
+  };
 
 
 
   var customers = [{
-    id: 1;
+    id: 1,
     firstName: "Bowen",
     lastName: "Zhong",
     address: "2 Park Road",
     city: "Shanghai",
     orders: [
-    	{ product: 'Basket', price: 29.99, quantity: 1, orderTotal: 29.99 },
+      { product: 'Basket', price: 29.99, quantity: 1, orderTotal: 29.99 },
       { product: 'Yarn', price: 9.99, quantity: 1, orderTotal: 39.96 },
-      { product: 'Needes', price: 5.99, quantity: 1, orderTotal: 5.99 }    	
+      { product: 'Needes', price: 5.99, quantity: 1, orderTotal: 5.99 }
     ]
   }, {
     id: 2,
