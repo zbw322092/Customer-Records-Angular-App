@@ -2,10 +2,10 @@
 	<div class="container">
 		<h3><strong>Customer Orders</strong></h3>
 		<div class="customer-info">
-			<strong class="customer-name"><span>Orders for </span>Bowen Zhong</strong>
+			<strong class="customer-name"><span>Orders for </span>{{ customer.firstName + " " + customer.lastName }}</strong>
 			<div class="customer-address">
-				<span>2 Park Road</span><br>
-				<span>Shanghai</span>
+				<span>{{ customer.address }}</span><br>
+				<span>{{ customer.city }}</span>
 			</div>
 		</div>
 

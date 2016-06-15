@@ -104,11 +104,11 @@ app.controller('OrderChildController', function($scope) {
 
 
 // CustomerOrdersController
-app.controller("CustomerOrdersController", function($scope) {
-	
+app.controller("CustomerOrdersController", function($scope, $location, customersService) {
+
 	init();
 	function init() {
-		$scope.customers = customersService.getCustomers();
+		$scope.customer = customersService.getCustomer($location.path().slice(16));
 	}
 	
 });
