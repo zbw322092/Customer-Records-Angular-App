@@ -115,8 +115,8 @@ app.service('customersService', function() {
     address: '33 S. Lake Blvd',
     city: 'Chicago',
     orders: [
-      { product: 'Book: AngularJS Development', price: 39.99, quantity: 1, orderTotal: 39.99 },
-      { product: 'Book: Basket Weaving Made Simple', price: 19.99, quantity: 1, orderTotal: 19.99 }
+      { product: 'Book: Basket Weaving Made Simple', price: 19.99, quantity: 1, orderTotal: 19.99 },
+      { product: 'Book: AngularJS Development', price: 39.99, quantity: 1, orderTotal: 39.99 }
     ]
   }, {
     id: 9,

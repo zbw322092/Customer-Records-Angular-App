@@ -54,11 +54,13 @@
 /* orders styles */
 .orders-form {
 	width: 90%;
-	margin-left: 0px;	
+	margin-left: 0px;
 }
 
 table {
-	margin-top: 10px;
+	margin-bottom: 10px;
+	border: 1px solid gray;
+	border-radius: 4px;
 }
 
 caption {
@@ -90,7 +92,6 @@ tr, td {
 }
 
 
-
 /* customer orders styles */
 .customer-info {
 	margin-left: 20px;
@@ -108,6 +109,10 @@ tr, td {
 .customer-orders-form {
 	margin-left: 20px;
 	margin-top: 50px;
+}
+
+.error {
+	background-color: #f2dede;
 }
 
 

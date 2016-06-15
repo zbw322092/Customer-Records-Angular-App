@@ -7,7 +7,7 @@ app.config(function($routeProvider) {
       templateUrl: "../app/partials/customers.html"
     })
     .when('/orders', {
-    	controller: "",
+    	controller: "OrdersController",
     	templateUrl: "../app/partials/orders.html"
     })
     .when('/customerorders/:id', {
