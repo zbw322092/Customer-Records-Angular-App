@@ -11,7 +11,7 @@ app.config(function($routeProvider) {
     	templateUrl: "../app/partials/orders.html"
     })
     .when('/customerorders/:id', {
-      controller: "",
+      controller: "CustomerOrdersController",
       templateUrl: "../app/partials/customerOrders.html"
     })
     .otherwise({ redirectTo: '/customers' });

@@ -1,15 +1,15 @@
 <div class="orders-view">
   <div class="container">
     <h3>All Customers Orders</h3>
-    	<table class="orders-form" ng-repeat="customer in customers" ng-controller="OrderChildController">
-    		<caption><a href="">{{ customer.firstName + " " + customer.lastName }}</a></caption>
+    	<table class="orders-form" ng-repeat="customer in customers | orderBy: 'lastName'" ng-controller="OrderChildController">
+    		<caption><a href="#/customerorders/{{customer.id}}">{{ customer.firstName + " " + customer.lastName }}</a></caption>
     		<tr class="orders-form-header">
-    			<td>Product</td>
-    			<td>Quantity</td>
-    			<td>Unit Price</td>
-    			<td>Total</td>
+    			<td ng-click="productOrder('product')">Product</td>
+    			<td ng-click="productOrder('quantity')">Quantity</td>
+    			<td ng-click="productOrder('price')">Unit Price</td>
+    			<td ng-click="productOrder('orderTotal')">Total</td>
     		</tr>
-    		<tr class="orders-form-body" ng-repeat="order in customer.orders">
+    		<tr class="orders-form-body" ng-repeat="order in customer.orders | orderBy: orderby:reverse">
     			<td>{{ order.product }}</td>
     			<td>{{ order.price | currency }}</td>
     			<td>{{ order.quantity }}</td>

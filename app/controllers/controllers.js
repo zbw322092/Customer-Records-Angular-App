@@ -48,35 +48,70 @@ app.controller('CustomersController', function($scope, customersService) {
 
 // Orders Controller
 app.controller('OrdersController', function($scope, customersService) {
-  $scope.customers = customersService.getCustomers();
+
+  init();
+
+  function init() {
+    $scope.customers = customersService.getCustomers();
+  }
 
 });
+
+
+
+
+
 
 app.controller('OrderChildController', function($scope) {
-  if ($scope.customer.orders) {
-    var sumPrice = 0;
-    for (var i = 0; i < $scope.customer.orders.length; i++) {
-      sumPrice += $scope.customer.orders[i].orderTotal;
+  $scope.orderby = 'product';
+  $scope.reverse = false;
+
+  init();
+
+  function init() {
+    if ($scope.customer.orders) {
+      var sumPrice = 0;
+      for (var i = 0; i < $scope.customer.orders.length; i++) {
+        sumPrice += $scope.customer.orders[i].orderTotal;
+      }
+      $scope.sum = sumPrice;
+
+      // Another solution
+      // $scope.sum = 0;
+      // for (var i = 0; i < $scope.customer.orders.length; i++) {
+      // 	$scope.sum += $scope.customer.orders[i].orderTotal;
+      // }
+      // return $scope.sum;
+
+    } else {
+      $scope.sum = 0;
     }
-    $scope.sum = sumPrice;
-    return $scope.sum;
-
-    // Another solution
-    // $scope.sum = 0;
-    // for (var i = 0; i < $scope.customer.orders.length; i++) {
-    // 	$scope.sum += $scope.customer.orders[i].orderTotal;
-    // }
-    // return $scope.sum;
-
-  } else {
-  	$scope.sum = 0;
-	console.log($scope.customer.orders);
-    return $scope.sum;    
   }
-  
+
+
+  $scope.productOrder = function(orderby) {
+  	if (orderby === $scope.orderby) {
+  		$scope.reverse = !$scope.reverse;
+  	}
+  	$scope.orderby = orderby;
+  };
+
+  // $scope.productOrder = window.alert("ok");
 
 });
 
+
+
+
+// CustomerOrdersController
+app.controller("CustomerOrdersController", function($scope) {
+	
+	init();
+	function init() {
+		$scope.customers = customersService.getCustomers();
+	}
+	
+});
 
 
 
