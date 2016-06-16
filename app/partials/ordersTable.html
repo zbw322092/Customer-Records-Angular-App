@@ -1,0 +1,21 @@
+<table class="orders-form" ng-controller="OrderChildController">
+  <tr class="orders-form-header">
+    <td ng-click="productOrder('product')">Product</td>
+    <td ng-click="productOrder('quantity')">Quantity</td>
+    <td ng-click="productOrder('price')">Unit Price</td>
+    <td ng-click="productOrder('orderTotal')">Total</td>
+  </tr>
+  <tr class="orders-form-body" ng-repeat="order in customer.orders | orderBy: orderby:reverse">
+    <td>{{ order.product }}</td>
+    <td>{{ order.price | currency }}</td>
+    <td>{{ order.quantity }}</td>
+    <td>{{ order.orderTotal | currency }}</td>
+  </tr>
+  <tr class="error" ng-hide="customer.orders">
+    <td colspan="4" class="text-center"><strong>No orders found</strong></td>
+  </tr>
+  <tr class="orders-form-last">
+    <td colspan="3"></td>
+    <td><strong>{{ sum | currency }}</strong></td>
+  </tr>
+</table>
