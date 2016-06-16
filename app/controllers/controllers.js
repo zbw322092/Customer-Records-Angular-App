@@ -1,5 +1,5 @@
 // Customers Controller
-app.controller('CustomersController', function($scope, customersService) {
+app.controller('CustomersController', function($scope, $routeParams, customersService) {
   // unnecessary
   // $scope.firstName;
   // $scope.lastName;
@@ -40,6 +40,7 @@ app.controller('CustomersController', function($scope, customersService) {
   $scope.removeCustomer = function(id) {
     customersService.deleteCustomer(id);
   };
+
 });
 
 
@@ -59,7 +60,7 @@ app.controller('OrdersController', function($scope, customersService) {
 
 
 // CustomerOrdersController
-app.controller("CustomerOrdersController", function($scope, $location, customersService) {
+app.controller("CustomerOrdersController", function($scope, $location, $routeParams, customersService) {
 	$scope.customer = {};
 
 	init();

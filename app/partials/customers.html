@@ -1,6 +1,5 @@
 <div>
   <div class="container">
-
     <!-- input field -->
     <h2>Customers</h2>
     <div class="row">
@@ -23,17 +22,13 @@
         <br>
         <!-- empty string cannot be judged as false directly, we should use ! to transfer it 
         as boolean value -->
-        <button class="btn btn-primary" ng-click="addCustomer(firstName, lastName, city)"
-        ng-disabled="!(firstName&&lastName&&city)">
+        <button class="btn btn-primary" ng-click="addCustomer(firstName, lastName, city)" ng-disabled="!(firstName&&lastName&&city)">
           Add Customer</button>
       </div>
     </div>
-
-
-
     <!-- customers cards container -->
     <div class="row cardContainer">
-      <div class="col-xs-3 card" ng-repeat="customer in customers">
+      <div class="col-xs-3 card" ng-repeat="customer in customers | orderBy: 'firstName'">
         <div class="card-name">
           <span>{{ customer.firstName + " " + customer.lastName }}</span>
           <button class="close" ng-click="removeCustomer(customer.id)">&times;</button>
@@ -41,10 +36,9 @@
         <div class="card-city">
           {{ customer.city }}
         </div>
-        <a class="view-orders" href="">View <span> {{ customer.orders.length }} </span> Orders</a>
+        <a class="view-orders" ng-if="customer.orders.length" href="#/customerorders/{{customer.id}}">View <span> {{ customer.orders.length }} </span> Orders</a>
+        <a class="view-orders" ng-if="!(customer.orders.length)" href="">No Orders</a>
       </div>
-
-
     </div>
   </div>
 </div>
