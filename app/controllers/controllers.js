@@ -45,8 +45,6 @@ app.controller('CustomersController', function($scope, $routeParams, customersSe
 
 
 
-
-
 // Orders Controller
 app.controller('OrdersController', function($scope, customersService) {
 
@@ -59,6 +57,7 @@ app.controller('OrdersController', function($scope, customersService) {
 });
 
 
+
 // CustomerOrdersController
 app.controller("CustomerOrdersController", function($scope, $location, $routeParams, customersService) {
 	$scope.customer = {};
@@ -67,9 +66,8 @@ app.controller("CustomerOrdersController", function($scope, $location, $routePar
 	function init() {
 		$scope.customer = customersService.getCustomer($location.path().slice(16));
 	}
-	
-});
 
+});
 
 
 
@@ -110,11 +108,6 @@ app.controller('OrderChildController', function($scope) {
   // $scope.productOrder = window.alert("ok");
 
 });
-
-
-
-
-
 
 
 
