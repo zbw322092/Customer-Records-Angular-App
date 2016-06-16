@@ -1,5 +1,5 @@
 // Customers Controller
-app.controller('CustomersController', function($scope, $routeParams, customersService) {
+app.controller('CustomersController', function($scope,$route, $routeParams, customersService) {
   // unnecessary
   // $scope.firstName;
   // $scope.lastName;
@@ -40,6 +40,16 @@ app.controller('CustomersController', function($scope, $routeParams, customersSe
   $scope.removeCustomer = function(id) {
     customersService.deleteCustomer(id);
   };
+
+  // $route properties
+  // console.log($route.current);
+  // console.log($route.current.locals);
+  // console.log($route.current.params);
+  // console.log($route.current.pathParams);
+  // console.log($route.current.scope);
+  // console.log($route.current.locals.$scope);
+  // console.log($route.current.locals.$template);  
+  // console.log($route.routes);
 
 });
 
